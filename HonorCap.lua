@@ -63,6 +63,7 @@ local function ApplySettings()
     subLabel:SetFont(FONT_PATH, math.max(14, math.floor(db.fontSize * 0.54)), "OUTLINE")
     warnFrame:ClearAllPoints()
     warnFrame:SetPoint("CENTER", UIParent, "CENTER", db.x, db.y)
+    warnFrame:EnableMouse(not isLocked)
 end
 
 local function GetHonor()
@@ -181,6 +182,7 @@ local function CreateOptionsPanel()
     lockBtn:SetScript("OnClick", function()
         isLocked = not isLocked
         db.locked = isLocked
+        warnFrame:EnableMouse(not isLocked)
         UpdateLockBtn()
     end)
 
