@@ -1,4 +1,4 @@
-## Interface: 120007
+## Interface: 120007, 120100
 ## Title: HonorCap
 ## Notes: Warns when Honor is near cap. Retail
 ## Version: 1.0
